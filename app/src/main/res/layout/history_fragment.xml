@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/image_padding"
+        app:layout_constraintBottom_toTopOf="@id/item_rv"
+        app:layout_constraintEnd_toStartOf="@id/back_to_order_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cyberthug69_s_order_history"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clear_history_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/image_padding"
+        android:text="@string/clear_history"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintBottom_toTopOf="@+id/item_rv"
+        app:layout_constraintEnd_toStartOf="@id/back_to_order_button"
+        app:layout_constraintStart_toEndOf="@id/header_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:enabled="false"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_to_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/image_padding"
+        android:text="@string/back_to_order"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintBottom_toTopOf="@+id/item_rv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/clear_history_button"
+        app:layout_constraintTop_toTopOf="parent"
+        android:enabled="false"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/image_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout"
+        android:indeterminate="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/layout_border"
+        android:padding="@dimen/image_padding">
+
+        <ImageView
+            android:id="@+id/product_iv"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:padding="@dimen/image_padding" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:singleLine="true"
+                android:text="@string/name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+            <TextView
+                android:id="@+id/sku_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:singleLine="true"
+                android:text="@string/sku"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:singleLine="true"
+                android:text="@string/price"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/remove_item_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/image_padding"
+        android:padding="@dimen/image_padding"
+        app:icon="@drawable/ic_baseline_close_24"
+        app:iconGravity="textStart" />
+
+</com.google.android.material.card.MaterialCardView>
